@@ -11,7 +11,7 @@ import config.UserConfig;
 
 
 /**
- * The BotSpark class implements Runnable and builds the configuration for the irc bot, 
+ * The BotSpark class implements the Runnable interface and builds the configuration for the irc bot, 
  * as well as initiating it's processes.
  * 
  * @author Christopher Johnson
