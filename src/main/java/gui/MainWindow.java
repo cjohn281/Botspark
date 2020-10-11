@@ -31,11 +31,12 @@ public class MainWindow extends JFrame {
 	private JButton configBtn;					// Config Button
 	private JButton connectBtn;					// Connect Button
 	
-	private Boolean connected = false;			// Determines if user is attempting to connect to server
 	private UserConfig user;					// Holds a reference to the UserConfig object
-	private BotSpark bot;
-	private Thread botThread;
+	private BotSpark bot;						// Holds a reference to the BotSpark object
+	private Thread botThread;					// A Thread for irc processes
 	
+	private Boolean connected = false;			// Determines if user is attempting to connect to server
+
 	
 	/**
 	 * Constructor
@@ -162,6 +163,7 @@ public class MainWindow extends JFrame {
 		/**
 		 * Constructor
 		 * @param mw The current MainWindow object
+		 * @param bot The BotSpark object
 		 */
 		public ButtonListener(MainWindow mw, BotSpark bot) {
 			this.currentWindow = mw;
@@ -185,6 +187,8 @@ public class MainWindow extends JFrame {
 					configBtn.setEnabled(false);
 					connectBtn.setText("Stop");
 					
+					// Create a new BotSpark object with the current UserConfig
+					// object as an argument and start the bot.
 					bot = new BotSpark(user);
 					botThread = new Thread(bot);
 					botThread.start();
@@ -193,6 +197,8 @@ public class MainWindow extends JFrame {
 					// connected to the irc server.
 					configBtn.setEnabled(true);
 					connectBtn.setText("Connect");
+					
+					// Stop the bot's execution.
 					bot.stop();
 					botThread = null;
 				}

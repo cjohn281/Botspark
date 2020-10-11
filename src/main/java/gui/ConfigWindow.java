@@ -428,20 +428,28 @@ public class ConfigWindow extends JDialog {
 		public void mousePressed(MouseEvent e) {
 			// TODO Auto-generated method stub
 			
+			// Not needed.
+			
 		}
 
 		public void mouseReleased(MouseEvent e) {
 			// TODO Auto-generated method stub
+			
+			// Not needed.
 			
 		}
 
 		public void mouseEntered(MouseEvent e) {
 			// TODO Auto-generated method stub
 			
+			// Not needed.
+			
 		}
 
 		public void mouseExited(MouseEvent e) {
 			// TODO Auto-generated method stub
+			
+			// Not needed.
 			
 		}
 	}
