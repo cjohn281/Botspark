@@ -1,6 +1,8 @@
 # Botspark
 A simple Twitch irc bot
 
+You must have Java installed on your computer to use Botspark!
+
 Botspark is a simple irc bot for Twitch.tv.  It offers a graphical user interface that allows you to quickly and easily add or remove new commands.
 
 When the application is first opened, you will need to open the Config menu and enter your Twitch username and add any commands that you would like Botspark to have.
